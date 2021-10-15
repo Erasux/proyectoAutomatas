@@ -20,8 +20,15 @@ public class mainClass {
         // TODO code application logic here
         automata at = new automata();
         int opc = 1000;
+        boolean salida;
         menuPrincipal mpJframe= new menuPrincipal();
-        mpJframe.show();
+    
+        mpJframe.setVisible(true);
+          
+      
+          
+        
+        
     }
 
 }

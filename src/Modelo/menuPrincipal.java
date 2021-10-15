@@ -185,7 +185,8 @@ public class menuPrincipal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void boton1AutomataActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton1AutomataActionPerformed
-        // TODO add your handling code here:
+    ingresarAutomata at= new ingresarAutomata();
+    at.setVisible(true);// TODO add your handling code here:
     }//GEN-LAST:event_boton1AutomataActionPerformed
 
     private void botonOperacionesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonOperacionesActionPerformed
