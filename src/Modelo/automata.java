@@ -23,10 +23,8 @@ public class automata {
         this.estadoFinal = estadoFinal;
         this.Transiciones = Transiciones;
     }
-    
 
-  
-     public automata() {
+    public automata() {
         this.estados = null;
         this.alfabeto = null;
         this.estadoInicial = "";
@@ -74,5 +72,18 @@ public class automata {
         this.Transiciones = Transiciones;
     }
 
- 
+    public static void ingresarAutomata() {
+        String[][] automatas;
+        boolean opc = true;
+        do {
+            System.out.println("Por favor ingresar estados del automata:");
+        } while (opc == true);
+
+        System.out.println("Por favor ingresar alfabeto del automata");
+        System.out.println("Por favor ingresar nombre del estado inicial del automata");
+        System.out.println("Por favor ingresar nombre del estado final del automata");
+        System.out.println("Por favor ingresar Transiciones del automata");
+
+    }
+
 }
