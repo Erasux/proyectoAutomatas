@@ -71,19 +71,45 @@ public class automata {
     public void setTransiciones(String[][] Transiciones) {
         this.Transiciones = Transiciones;
     }
+    
+    public boolean buscarEstado(String[] estados, String estadoBuscado) {
+        boolean temp = false;
+        for (int i = 0; i < estados.length; i++) {
+          if (estadoBuscado.equals(estados[i])) {
+                temp = true;
+            }
 
-    public static void ingresarAutomata() {
-        String[][] automatas;
-        boolean opc = true;
-        do {
-            System.out.println("Por favor ingresar estados del automata:");
-        } while (opc == true);
+        }
+        return temp;
+    }
 
-        System.out.println("Por favor ingresar alfabeto del automata");
-        System.out.println("Por favor ingresar nombre del estado inicial del automata");
-        System.out.println("Por favor ingresar nombre del estado final del automata");
-        System.out.println("Por favor ingresar Transiciones del automata");
+    @Override
+    public String toString() {
+        String estadosTexto = "";
+        for (int i = 0; i < getEstados().length; i++) {
+            if (getEstados()[i] != null) {
+                estadosTexto += getEstados()[i] + "-";
+            }
+        }
+        String alfabetoTexto = "";
+        for (int i = 0; i < getAlfabeto().length; i++) {
+            if (getAlfabeto()[i] != null) {
+                alfabetoTexto += getAlfabeto()[i] + "-";
+            }
+        }
+        String estadosFTexto = "";
+        for (int i = 0; i < getEstadoFinal().length; i++) {
+            if (getEstadoFinal()[i] != null) {
+                estadosFTexto += getEstadoFinal()[i] + "-";
+            }
+        }
 
+        String todo = "Estados:" + estadosTexto
+                + "\nAlfabeto: " + alfabetoTexto
+                + "\nEstado Inicial: " + getEstadoInicial()
+                + "\n Estado Final: " + estadosFTexto;
+
+        return todo; //To change body of generated methods, choose Tools | Templates.
     }
 
 }
