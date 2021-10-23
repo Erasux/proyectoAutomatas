@@ -1,7 +1,6 @@
 package Vista;
 
 import Modelo.automata;
-import Modelo.menuPrincipal;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
