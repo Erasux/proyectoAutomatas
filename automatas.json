@@ -1,0 +1,17 @@
+{
+  "automata1": {
+    "estados": ["A", "B", "C", "D"],
+    "estadoInicial": "A",
+    "alfabeto": [],
+    "estadoFinal": "",
+    "transiciones": ""
+  },
+
+  "automata2": {
+    "estados": ["E", "F", "G", "H"],
+    "estadoInicial": "E",
+    "alfabeto": [],
+    "estadoFinal": "",
+    "transiciones": ""
+  }
+}
