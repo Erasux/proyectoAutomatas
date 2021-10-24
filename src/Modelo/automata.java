@@ -4,6 +4,9 @@
  */
 package Modelo;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  *
  * @author samir
@@ -13,10 +16,10 @@ public class Automata {
     private String[] estados;
     private String[] alfabeto;
     private String estadoInicial;
-    private String[] estadoFinal;
-    private String[][] Transiciones;
+    private String estadoFinal;
+    private List<ArrayList>Transiciones;
 
-    public Automata(String[] estados, String[] alfabeto, String estadoInicial, String[] estadoFinal, String[][] Transiciones) {
+    public Automata(String[] estados, String[] alfabeto, String estadoInicial, String estadoFinal, List<ArrayList> Transiciones) {
         this.estados = estados;
         this.alfabeto = alfabeto;
         this.estadoInicial = estadoInicial;
@@ -56,26 +59,26 @@ public class Automata {
         this.estadoInicial = estadoInicial;
     }
 
-    public String[] getEstadoFinal() {
+    public String getEstadoFinal() {
         return estadoFinal;
     }
 
-    public void setEstadoFinal(String[] estadoFinal) {
+    public void setEstadoFinal(String estadoFinal) {
         this.estadoFinal = estadoFinal;
     }
 
-    public String[][] getTransiciones() {
+    public Object getTransiciones() {
         return Transiciones;
     }
 
-    public void setTransiciones(String[][] Transiciones) {
+    public void setTransiciones(ArrayList Transiciones) {
         this.Transiciones = Transiciones;
     }
-    
+
     public boolean buscarEstado(String[] estados, String estadoBuscado) {
         boolean temp = false;
         for (int i = 0; i < estados.length; i++) {
-          if (estadoBuscado.equals(estados[i])) {
+            if (estadoBuscado.equals(estados[i])) {
                 temp = true;
             }
 
@@ -97,17 +100,17 @@ public class Automata {
                 alfabetoTexto += getAlfabeto()[i] + "-";
             }
         }
-        String estadosFTexto = "";
+
+        /*String estadosFTexto = "";
         for (int i = 0; i < getEstadoFinal().length; i++) {
             if (getEstadoFinal()[i] != null) {
                 estadosFTexto += getEstadoFinal()[i] + "-";
             }
-        }
-
+        }*/
         String todo = "Estados:" + estadosTexto
                 + "\nAlfabeto: " + alfabetoTexto
-                + "\nEstado Inicial: " + getEstadoInicial()
-                + "\n Estado Final: " + estadosFTexto;
+                + "\nEstado Inicial: " + getEstadoInicial();
+        //+ "\n Estado Final: " + estadosFTexto;
 
         return todo; //To change body of generated methods, choose Tools | Templates.
     }
