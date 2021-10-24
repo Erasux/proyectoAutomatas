@@ -5,7 +5,7 @@ package Modelo;
  *
  * @author samir
  */
-public class operaciones {
+public class Operaciones {
     public void union(){
     }
     
