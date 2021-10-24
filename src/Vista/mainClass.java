@@ -1,6 +1,8 @@
 package Vista;
 
-import Modelo.automata;
+import Modelo.Automata;
+import java.util.ArrayList;
+import java.util.List;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
@@ -12,8 +14,9 @@ public class mainClass {
 
     public static void main(String[] args) {
         // TODO code application logic here
-        
-        automata at = new automata();
+
+        Automata at = new Automata();
+        ArrayList<Automata> automatas = new ArrayList<Automata>();
         int opc = 1000;
         boolean salida;
         JFrame jfr = new JFrame();
@@ -26,7 +29,7 @@ public class mainClass {
                     + "5.Salir al escritorio"));
             switch (opc) {
 
-                case 1:
+              /*  case 1:
                     int variable;
                     int i = 0;
                     //Abecedario
@@ -76,7 +79,7 @@ public class mainClass {
                     i = 0;
                     JOptionPane.showMessageDialog(jfr, at.toString());
 
-                    break;
+                    break;*/
 
                 case 2:
                     break;
