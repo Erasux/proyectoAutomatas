@@ -8,7 +8,7 @@ package Modelo;
  *
  * @author samir
  */
-public class automata {
+public class Automata {
 
     private String[] estados;
     private String[] alfabeto;
@@ -16,7 +16,7 @@ public class automata {
     private String[] estadoFinal;
     private String[][] Transiciones;
 
-    public automata(String[] estados, String[] alfabeto, String estadoInicial, String[] estadoFinal, String[][] Transiciones) {
+    public Automata(String[] estados, String[] alfabeto, String estadoInicial, String[] estadoFinal, String[][] Transiciones) {
         this.estados = estados;
         this.alfabeto = alfabeto;
         this.estadoInicial = estadoInicial;
@@ -24,7 +24,7 @@ public class automata {
         this.Transiciones = Transiciones;
     }
 
-    public automata() {
+    public Automata() {
         this.estados = null;
         this.alfabeto = null;
         this.estadoInicial = "";
