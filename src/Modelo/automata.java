@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package Modelo;
 
 import java.util.ArrayList;
@@ -87,31 +83,30 @@ public class Automata {
         return temp;
     }
 
- 
+    public String recorrerArreglo(String[] valores) {
+        String valoresTexto = "";
+        for (int i = 0; i < valores.length; i++) {
+            if (valores[i] != null) {
+                valoresTexto += valores[i] + "-";
+            }
+        }
+        return valoresTexto;
+    }
+
     @Override
     public String toString() {
-        String estadosTexto = "";
-        for (int i = 0; i < getEstados().length; i++) {
-            if (getEstados()[i] != null) {
-                estadosTexto += getEstados()[i] + "-";
-            }
-        }
-        String alfabetoTexto = "";
-        for (int i = 0; i < getAlfabeto().length; i++) {
-            if (getAlfabeto()[i] != null) {
-                alfabetoTexto += getAlfabeto()[i] + "-";
-            }
-        }
-         String transicionesTexto = "";
+        String estadosTexto = recorrerArreglo(getEstados());
+        
+        String alfabetoTexto = recorrerArreglo(getAlfabeto());
+        String transicionesTexto = "";
         for (int i = 0; i < getTransiciones().size(); i++) {
             if (getTransiciones().get(i) != null) {
                 transicionesTexto += getTransiciones().get(i) + "-";
             }
         }
-        
 
         String todo = "Estados:" + estadosTexto + "\nAlfabeto: " + alfabetoTexto + "\nEstado Inicial: "
-                + getEstadoInicial() + "\n Estado Final: " + getEstadoFinal()+"\nTransiciones: "+ transicionesTexto;
+                + getEstadoInicial() + "\n Estado Final: " + getEstadoFinal() + "\nTransiciones: " + transicionesTexto;
 
         return todo; // To change body of generated methods, choose Tools | Templates.
     }
