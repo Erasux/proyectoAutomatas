@@ -76,7 +76,4 @@ public class JSON {
         return null;
     }
 
-    public static void main(String[] args) {
-        //readJSONFile();
-    }
 }
