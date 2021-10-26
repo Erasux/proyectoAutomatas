@@ -17,9 +17,10 @@ public class Automata {
     private String[] alfabeto;
     private String estadoInicial;
     private String estadoFinal;
-    private List<ArrayList>Transiciones;
+    private List<ArrayList> Transiciones;
 
-    public Automata(String[] estados, String[] alfabeto, String estadoInicial, String estadoFinal, List<ArrayList> Transiciones) {
+    public Automata(String[] estados, String[] alfabeto, String estadoInicial, String estadoFinal,
+            List<ArrayList> Transiciones) {
         this.estados = estados;
         this.alfabeto = alfabeto;
         this.estadoInicial = estadoInicial;
@@ -31,7 +32,7 @@ public class Automata {
         this.estados = null;
         this.alfabeto = null;
         this.estadoInicial = "";
-        this.estadoFinal = null;
+        this.estadoFinal = "";
         this.Transiciones = null;
     }
 
@@ -86,6 +87,7 @@ public class Automata {
         return temp;
     }
 
+ 
     @Override
     public String toString() {
         String estadosTexto = "";
@@ -101,18 +103,10 @@ public class Automata {
             }
         }
 
-        /*String estadosFTexto = "";
-        for (int i = 0; i < getEstadoFinal().length; i++) {
-            if (getEstadoFinal()[i] != null) {
-                estadosFTexto += getEstadoFinal()[i] + "-";
-            }
-        }*/
-        String todo = "Estados:" + estadosTexto
-                + "\nAlfabeto: " + alfabetoTexto
-                + "\nEstado Inicial: " + getEstadoInicial();
-        //+ "\n Estado Final: " + estadosFTexto;
+        String todo = "Estados:" + estadosTexto + "\nAlfabeto: " + alfabetoTexto + "\nEstado Inicial: "
+                + getEstadoInicial() + "\n Estado Final: " + getEstadoFinal();
 
-        return todo; //To change body of generated methods, choose Tools | Templates.
+        return todo; // To change body of generated methods, choose Tools | Templates.
     }
 
 }

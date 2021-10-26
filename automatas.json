@@ -19,7 +19,7 @@
   "automata2": {
     "estados": ["E", "F", "G", "H", "SUM"],
     "estadoInicial": "E",
-    "alfabeto": ["0", "1"],
+    "alfabeto": ["2", "3"],
     "estadoFinal": "F",
     "transiciones": [
       ["E", "G", "1"],
