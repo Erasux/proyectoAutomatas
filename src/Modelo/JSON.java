@@ -30,12 +30,14 @@ public class JSON {
             String automata = "";
             Map<String, Object> valor = new HashMap<>();
             String estadoInicial = "";
-            String[] alfabeto = new String[2];
+            String[] alfabeto = null;
             String estadoFinal = "";
-            String[] estados = new String[5];
+            String[] estados = null;
             List<ArrayList> transiciones = new ArrayList<>();
 
             while (entries.hasNext()) {
+                estados = new String[5];
+                alfabeto = new String[2];
                 Map.Entry entry = (Map.Entry) entries.next();
                 automata = (String) entry.getKey();
                 valor = (Map) entry.getValue();
@@ -57,8 +59,7 @@ public class JSON {
                 for (int i = 0; i < alfTemporales.size(); i++) {
                     alfabeto[i] = (String) alfTemporales.get(i);
                 }
-
-                //organizar estados
+                
                Automata at = new Automata(estados, alfabeto, estadoInicial, estadoFinal, transiciones);
                automatas.add(at);               
             }
