@@ -68,7 +68,7 @@ public class Automata {
         this.estadoFinal = estadoFinal;
     }
 
-    public Object getTransiciones() {
+    public List getTransiciones() {
         return Transiciones;
     }
 
@@ -102,9 +102,16 @@ public class Automata {
                 alfabetoTexto += getAlfabeto()[i] + "-";
             }
         }
+         String transicionesTexto = "";
+        for (int i = 0; i < getTransiciones().size(); i++) {
+            if (getTransiciones().get(i) != null) {
+                transicionesTexto += getTransiciones().get(i) + "-";
+            }
+        }
+        
 
         String todo = "Estados:" + estadosTexto + "\nAlfabeto: " + alfabetoTexto + "\nEstado Inicial: "
-                + getEstadoInicial() + "\n Estado Final: " + getEstadoFinal();
+                + getEstadoInicial() + "\n Estado Final: " + getEstadoFinal()+"\nTransiciones: "+ transicionesTexto;
 
         return todo; // To change body of generated methods, choose Tools | Templates.
     }
