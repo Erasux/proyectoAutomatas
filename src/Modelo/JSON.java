@@ -33,11 +33,12 @@ public class JSON {
             String[] alfabeto = null;
             String estadoFinal = "";
             String[] estados = null;
-            List<ArrayList> transiciones = new ArrayList<>();
+            List<ArrayList> transiciones = null;
 
             while (entries.hasNext()) {
                 estados = new String[5];
                 alfabeto = new String[2];
+                transiciones=new ArrayList<>();
                 Map.Entry entry = (Map.Entry) entries.next();
                 automata = (String) entry.getKey();
                 valor = (Map) entry.getValue();
