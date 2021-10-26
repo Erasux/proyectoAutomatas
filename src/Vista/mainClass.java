@@ -1,6 +1,7 @@
 package Vista;
 
 import Modelo.Automata;
+import Modelo.JSON;
 import java.util.ArrayList;
 import java.util.List;
 import javax.swing.JFrame;
@@ -13,13 +14,18 @@ import javax.swing.JOptionPane;
 public class mainClass {
 
     public static void main(String[] args) {
-        // TODO code application logic here
-
         Automata at = new Automata();
-        ArrayList<Automata> automatas = new ArrayList<Automata>();
-        int opc = 1000;
+        JSON json = new JSON();
+        ArrayList<Automata> automatas = json.readJSONFile();
         boolean salida;
+
         JFrame jfr = new JFrame();
+        if (automatas.size() != 0) {
+            JOptionPane.showMessageDialog(jfr, "Automatas cargado", "Información", 1);
+        }
+
+        int opc;
+
         do {
             opc = Integer.parseInt(JOptionPane.showInputDialog(jfr, "Introduzca una opcion:\n"
                     + "1.Ingresar 1° automata\n"
@@ -29,7 +35,7 @@ public class mainClass {
                     + "5.Salir al escritorio"));
             switch (opc) {
 
-              /*  case 1:
+                /*  case 1:
                     int variable;
                     int i = 0;
                     //Abecedario
@@ -80,7 +86,6 @@ public class mainClass {
                     JOptionPane.showMessageDialog(jfr, at.toString());
 
                     break;*/
-
                 case 2:
                     break;
                 case 3:
