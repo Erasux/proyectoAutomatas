@@ -10,7 +10,6 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 import Modelo.Automata;
-import com.sun.javafx.scene.control.skin.VirtualFlow;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -22,7 +21,7 @@ public class JSON {
     Automata automata = null;
 
     //método para leer archivos json 
-    public static void readJSONFile() {
+    public  ArrayList<Automata>  readJSONFile() {
         JSONParser jsonParser = new JSONParser();
         try {
             Object jsonFile = jsonParser.parse(new FileReader("..\\proyectoAutomatas\\automatas.json"));
@@ -60,8 +59,11 @@ public class JSON {
                 }
 
                 //organizar estados
-                new Automata(estados, alfabeto, estadoInicial, estadoFinal, transiciones);
+               Automata at = new Automata(estados, alfabeto, estadoInicial, estadoFinal, transiciones);
+               automatas.add(at);               
             }
+            
+            return automatas;
 
         } catch (FileNotFoundException e) {
             System.out.println(e);
@@ -70,9 +72,11 @@ public class JSON {
         } catch (ParseException e) {
             System.out.println(e);
         }
+        
+        return null;
     }
 
     public static void main(String[] args) {
-        readJSONFile();
+        //readJSONFile();
     }
 }
