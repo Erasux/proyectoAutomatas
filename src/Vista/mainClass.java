@@ -51,8 +51,10 @@ public class mainClass {
                 break;
                 
             case 2:
+                JOptionPane.showMessageDialog(jfr,opr.union(automatas.get(0), automatas.get(1)));
                 break;
             case 3:
+                JOptionPane.showMessageDialog(jfr,opr.inteseccion(automatas.get(0), automatas.get(1)));
                 break;
             case 4:
                 mostrarAutomatasIngresados(jfr, automatas);
@@ -91,7 +93,7 @@ public class mainClass {
                 String completo="";
                 int i=1;
                 for (Automata automata : automatas) {
-                    completo+= "Automata " +i +": \n"+automata.toString()+"\n";
+                    completo+= "Automata " +i +": \n"+automata.toString()+"\n\n";
                     i++;
         } JOptionPane.showMessageDialog(jfr,completo , "Automatas ", 1);
     
