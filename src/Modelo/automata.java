@@ -93,20 +93,24 @@ public class Automata {
         return valoresTexto;
     }
 
+    public String recorrerLista(List<String[]> valores) {
+        String valoresTexto = "";
+        for (int i = 0; i < valores.size(); i++) {
+            String[] transicion = valores.get(i);
+            valoresTexto += "[" + transicion[0] + "," + transicion[1] + "," + transicion[2] + "]" + "-";
+
+        }
+        return valoresTexto;
+    }
+
     @Override
     public String toString() {
         String estadosTexto = recorrerArreglo(getEstados());
-        
+
         String alfabetoTexto = recorrerArreglo(getAlfabeto());
-        String transicionesTexto = "";
-        for (int i = 0; i < getTransiciones().size(); i++) {
-            if (getTransiciones().get(i) != null) {
-                transicionesTexto += getTransiciones().get(i) + "-";
-            }
-        }
 
         String todo = "Estados:" + estadosTexto + "\nAlfabeto: " + alfabetoTexto + "\nEstado Inicial: "
-                + getEstadoInicial() + "\n Estado Final: " + getEstadoFinal() + "\nTransiciones: " + transicionesTexto;
+                + getEstadoInicial() + "\n Estado Final: " + getEstadoFinal() + "\nTransiciones: " + getTransiciones();
 
         return todo; // To change body of generated methods, choose Tools | Templates.
     }

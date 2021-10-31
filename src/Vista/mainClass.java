@@ -56,12 +56,17 @@ public class mainClass {
                 break;
             case 4:
                 mostrarAutomatasIngresados(jfr, automatas);
-                int numeroAutomata= Integer.parseInt(JOptionPane.showInputDialog(jfr,"Por favor elija un automata: "));
+                int numeroAutomataComplemento= Integer.parseInt(JOptionPane.showInputDialog(jfr,"Por favor elija un automata: "));
                  
-                String mensajeComplemento= opr.complemento(automatas.get((numeroAutomata-1)));
+                String mensajeComplemento= opr.complemento(automatas.get((numeroAutomataComplemento-1)));
                 JOptionPane.showMessageDialog(jfr, mensajeComplemento, "Complemento", 1);
                 break;
             case 5:
+                mostrarAutomatasIngresados(jfr, automatas);
+                int numeroAutomataReverso= Integer.parseInt(JOptionPane.showInputDialog(jfr,"Por favor elija un automata: "));
+                 
+                String mensajeReverso= opr.reverso(automatas.get((numeroAutomataReverso-1)));
+                JOptionPane.showMessageDialog(jfr, mensajeReverso, "Reverso", 1);
                 break;
             case 6:
                 JOptionPane.showMessageDialog(jfr, "Saliendo...", "Salida escritorio", 1);

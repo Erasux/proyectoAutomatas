@@ -50,7 +50,7 @@ public class JSON {
                 //obtener transiciones
                 JSONArray transicionesTemporales = (JSONArray) valor.get("transiciones");
                 for (int i = 0; i < transicionesTemporales.size(); i++) {
-                    JSONArray transicion = (JSONArray) transicionesTemporales.get(i);
+                    ArrayList transicion = (ArrayList)transicionesTemporales.get(i);
                     transiciones.add(transicion);
                 }
                 estadoInicial = (String) valor.get("estadoInicial");
