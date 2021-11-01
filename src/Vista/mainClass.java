@@ -108,7 +108,7 @@ public class mainClass {
         Draw d = new Draw();
         f.add(d);
         
-        f.setSize(800, 450); // Tamaño del window
+        f.setSize(800, 250); // Tamaño del window
         f.setVisible(true);
     }
 }
