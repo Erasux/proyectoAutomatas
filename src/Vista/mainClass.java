@@ -1,6 +1,7 @@
 package Vista;
 
 import Modelo.Automata;
+import Modelo.Draw;
 import Modelo.JSON;
 import Modelo.Operaciones;
 import java.util.ArrayList;
@@ -43,6 +44,7 @@ public class mainClass {
             case 1:
                 if (automatas.size() != 0) {
                 JOptionPane.showMessageDialog(jfr, "Si hay un grupo de automatas cargados en el programa.", "Información", 1);
+                GraphicsAutomatas();
                 mostrarAutomatasIngresados(jfr, automatas);
                     }else{
                     JOptionPane.showMessageDialog(jfr, "No hay automatas en el programa", "Informacion", 0);
@@ -98,5 +100,14 @@ public class mainClass {
         } JOptionPane.showMessageDialog(jfr,completo , "Automatas ", 1);
     
     
+    }
+    
+    public static void GraphicsAutomatas() {
+        JFrame f = new JFrame("Automatas");
+        f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        Draw d = new Draw();
+        f.add(d);
+        f.setSize(3000, 450); // Tamaño del window
+        f.setVisible(true);
     }
 }
