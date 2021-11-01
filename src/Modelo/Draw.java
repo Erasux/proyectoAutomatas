@@ -37,7 +37,7 @@ public class Draw extends JPanel{
                 
                 for (int j = 1; j < automatas.size(); j++) {
                     for (int i = 0; i < automatas.get(j).getEstados().length; i++) {
-                        System.out.print(automatas.get(j).getEstados()[i]);
+                        // System.out.print(automatas.get(j).getEstados()[i]);
                         
                         if(i > 5){
 				break;
