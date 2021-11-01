@@ -21,7 +21,6 @@ public class Draw extends JPanel{
                 
                 
                 for (int j = 0; j < automatas.size(); j++) {
-                    int k = 0;
                     for (int i = 0; i < automatas.get(j).getEstados().length; i++) {
                         System.out.print(automatas.get(j).getEstados()[i]);
                         
@@ -30,12 +29,12 @@ public class Draw extends JPanel{
 			}else{
                             // text render
                             g.setColor(Color.BLACK); 
-                            // String[] estado = atr.getEstados(); // automatas.get(0).getEstados()[k]
-                            g.drawString((String)automatas.get(0).getEstados()[i], (x+5), (q));
-                            g.drawString((String)automatas.get(1).getEstados()[i], (x+5), (q));
+                            g.drawString((String)automatas.get(0).getEstados()[i], (x+20), (q+10));
+                            g.drawString((String)automatas.get(1).getEstados()[i], (x+20), (q+110));
                             //code to render each circle
                             g.setColor(Color.RED);  
                             g.drawOval(x, y, q, w);
+                            g.drawOval(x, y+100, q, w);
                             x = x+100;
                         }
                     
