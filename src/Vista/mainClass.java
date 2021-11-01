@@ -107,7 +107,8 @@ public class mainClass {
         f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         Draw d = new Draw();
         f.add(d);
-        f.setSize(3000, 450); // Tamaño del window
+        
+        f.setSize(800, 450); // Tamaño del window
         f.setVisible(true);
     }
 }
